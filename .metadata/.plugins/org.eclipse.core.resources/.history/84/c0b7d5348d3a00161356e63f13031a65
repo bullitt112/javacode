@@ -1,0 +1,150 @@
+package rockPaperScissors;
+
+import java.util.Random;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+	
+	public static void main(String args[]){
+		
+		
+		boolean playAgain = true;
+		
+		while(playAgain){
+			int randomNumber = getRandomNumber();
+			
+			String computerChoice = computerChoice(randomNumber);
+			String userChoice = userChoice();
+			
+			boolean win = isWin(computerChoice, userChoice);
+			boolean lose = isLose(computerChoice, userChoice);
+			
+			if(win){
+				JOptionPane.showMessageDialog(null, String.format("You win! Computer chose %s", computerChoice));
+			}
+			else if(lose){
+				JOptionPane.showMessageDialog(null, String.format("You lose! Computer chose %s", computerChoice));
+			}
+			else{
+				JOptionPane.showMessageDialog(null, String.format("You tie! Computer also chose %s", computerChoice));
+			}
+			
+			playAgain = playAgain();
+		}
+		
+		
+	}
+	
+	
+	public static int getRandomNumber(){		// Method to get a random number between 0-3
+		Random number = new Random();
+		
+		return number.nextInt(3);
+	}
+	
+	public static String computerChoice(int number){		// Method to determine the computer's choice
+		if(number == 0){
+			return "rock";
+		}
+		else if(number == 1){
+			return "paper";
+		}
+		else{
+			return "scissors";
+		}
+	}
+	
+	public static boolean playAgain(){		// Method to determine if the user wants to play again or not
+		int n = JOptionPane.showConfirmDialog(null, "Play again?", "Don't leave!!!", JOptionPane.YES_NO_OPTION);
+		
+		if(n == JOptionPane.YES_OPTION){
+			return true;
+		}
+		else{
+			return false;
+		}
+		
+	}
+	
+	public static String userChoice(){		// Method to determine the user's choice
+		String userChoice = "";
+		
+		while(!(userChoice.equalsIgnoreCase("rock")) && !(userChoice.equalsIgnoreCase("paper")) && !userChoice.equalsIgnoreCase("scissors")){
+			userChoice = JOptionPane.showInputDialog("Rock, Paper, or Scissors?");
+			
+			if(!(userChoice.equalsIgnoreCase("rock")) && !(userChoice.equalsIgnoreCase("paper")) && !userChoice.equalsIgnoreCase("scissors")){
+				JOptionPane.showMessageDialog(null, "Invalid input!");
+			}
+			
+		}
+		
+		return userChoice;
+	}
+	
+	public static boolean isWin(String computerInput, String userInput){		// Method to determine if the user wins
+		if(userInput.equalsIgnoreCase("rock")){
+			if(computerInput.equalsIgnoreCase("scissors")){
+				return true;
+			}
+		}
+		else if(userInput.equalsIgnoreCase("paper")){
+			if(computerInput.equalsIgnoreCase("rock")){
+				return true;
+			}
+			
+		}
+		else if(userInput.equalsIgnoreCase("scissors")){
+			if(computerInput.equalsIgnoreCase("paper")){
+				return true;
+			}
+			
+		}
+		return false;
+		
+	}
+	
+	public static boolean isTie(String computerInput, String userInput){		// Method to determine if the user tied
+		if(userInput.equalsIgnoreCase("rock")){
+			if(computerInput.equalsIgnoreCase("rock")){
+				return true;
+			}
+		}
+		else if(userInput.equalsIgnoreCase("paper")){
+			if(computerInput.equalsIgnoreCase("paper")){
+				return true;
+			}
+			
+		}
+		else if(userInput.equalsIgnoreCase("scissors")){
+			if(computerInput.equalsIgnoreCase("scissors")){
+				return true;
+			}
+			
+		}
+		return false;
+		
+	}
+	
+	public static boolean isLose(String computerInput, String userInput){		// Method to determine if the user loses
+		if(userInput.equalsIgnoreCase("rock")){
+			if(computerInput.equalsIgnoreCase("paper")){
+				return true;
+			}
+		}
+		else if(userInput.equalsIgnoreCase("paper")){
+			if(computerInput.equalsIgnoreCase("scissors")){
+				return true;
+			}
+			
+		}
+		else if(userInput.equalsIgnoreCase("scissors")){
+			if(computerInput.equalsIgnoreCase("rock")){
+				return true;
+			}
+			
+		}
+		return false;
+		
+	}
+}

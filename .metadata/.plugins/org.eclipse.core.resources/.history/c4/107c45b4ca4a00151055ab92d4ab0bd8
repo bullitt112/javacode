@@ -1,0 +1,23 @@
+package dfg;
+
+public class Allan {
+
+	public static void main(String[] args) {
+		  int totalPrint = 0;
+		  for (int count1 = 0; count1 < 10; count1++) {
+		   
+		   for (int count2 = 0; count2 < 10; count2++) {
+		    
+		    totalPrint++;
+		    System.out.println(count1*count2);
+		    
+		   }
+		   
+		  }
+		  System.out.println("totalPrint: "+totalPrint);
+
+		 }
+
+	}
+
+

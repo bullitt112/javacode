@@ -1,0 +1,27 @@
+﻿.ui-combobox {
+	position: relative;
+	display: inline-block;
+	background-color: White;
+}
+.ui-button {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-left: -1px;
+	padding: 0;
+	/* adjust styles for IE 6/7 */
+	*height: 1.7em;
+	*top: 0.1em;
+}
+.ui-autocomplete-input {
+	margin: 0;
+	padding: 0.3em;
+	background-color: White;
+}
+.ui-autocomplete {
+    max-height: 600px;
+    width: 459px;
+    overflow-y: auto;   /* prevent horizontal scrollbar */
+    overflow-x: hidden; /* add padding to account for vertical scrollbar */
+    z-index:1000 !important;
+}

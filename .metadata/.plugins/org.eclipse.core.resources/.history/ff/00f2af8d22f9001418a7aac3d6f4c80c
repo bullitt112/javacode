@@ -1,0 +1,6 @@
+package com.tyhurstjava.disco;
+
+public class Money {
+	String keyCode = "ABC";
+
+}

@@ -1,0 +1,31 @@
+package com.itt.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+@RestController
+public class UserController {
+	
+	@RequestMapping(value = "/user", method=RequestMethod.GET)
+	public String home(){
+		return "user";
+	}
+	
+//	@Autowired
+//	private UserService userService;
+//	
+//	@RequestMapping("/users")
+//	public ModelAndView users(ModelMap Model){
+//		
+//		List<user> 1stUser = userService.findAll();
+//		
+//		ModelAndView result = new ModelAndView("users");
+//		result.addObject("users", 1stUsers);
+//		
+//		return result;
+//	}
+
+}

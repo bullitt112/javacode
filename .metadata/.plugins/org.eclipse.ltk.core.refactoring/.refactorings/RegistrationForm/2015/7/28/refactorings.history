@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;RegistrationForm3/src/main/resources&apos;&#x0D;&#x0A;- Original project: &apos;RegistrationForm&apos;&#x0D;&#x0A;- Destination element: &apos;RegistrationForm3/src/main/resources&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     application.properties&#x0D;&#x0A;     banner.txt&#x0D;&#x0A;     data.sql" description="Copy files" destination="=RegistrationForm3/src\/main\/resources" element1="src/main/resources/application.properties" element2="src/main/resources/banner.txt" element3="src/main/resources/data.sql" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1436242658259" units="0" version="1.0"/>
+</session>

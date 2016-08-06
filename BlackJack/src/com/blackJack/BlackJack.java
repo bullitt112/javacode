@@ -1,0 +1,121 @@
+package com.blackJack;
+
+import java.util.Scanner;
+class blackJack{
+	public static void main(String[] args) {
+		int aFinalScore;
+		int bFinalScore;
+		startGame.run();
+	}
+}
+class startGame {
+	static int card (int score) {
+		int rand;
+		rand = (int) Math.floor(Math.random() * 15 + 1);
+		if (rand < 11 && rand > 1) {
+			return rand;
+		}
+		else if (rand == 1) {
+			if (score > 11) {
+				return 1;
+			}
+			else {
+				return 10;
+			}
+		}
+		else {
+			return 10;
+		}
+	}
+	/*String[] deck = new String[14];
+	for (int i = 1; i < 11; i++) {
+		deck[i] = Integer.toString(i);
+	}
+	String[11] = "jack";
+	String[12] = "queen";
+	String[13] = "king";
+	
+	*/
+	static void run() {
+		int aFinalScore;
+		int bFinalScore;
+		user a = new user();
+		comp b = new comp();
+		int aScore = a.play();
+		int bScore = b.play();
+		if (aScore > 21 && bScore > 21) {
+			System.out.println("You Both lose!");
+		}
+		else if (bScore > 21) {
+			System.out.println("The computer passed 21! You win!");
+			counter.aFinalScore++;
+		}
+		else if (aScore > 21) {
+			System.out.println("You passed 21 ! You lose!");
+			counter.bFinalScore++;
+		}
+		else if (aScore > bScore) {
+			System.out.println("You win!");
+			counter.aFinalScore++;
+		}
+		else if (bScore > aScore) {
+			System.out.println("Computer wins!");
+			counter.bFinalScore++;
+		}
+		else {
+			System.out.println("It's a tie!");
+		}
+		System.out.println("BTW, your score was " + aScore + " and his score was " + bScore);
+		Scanner promp = new Scanner(System.in);
+		while(!counter.ans.equals("n")) {
+			System.out.print("Do you want another game? y/n:");
+			counter.ans = promp.next();
+			if (counter.ans.equals("y")) {
+				startGame.run();
+			}
+			else if (counter.ans.equals("n")) {
+				System.out.println("The match has finished. Your final score is " + counter.aFinalScore + ", and the computer's final score is " + counter.bFinalScore);
+			}
+			else {
+				System.out.println(counter.ans + " is not a valid answer.");
+			}
+		}
+	}	
+}
+
+class user {
+	int score = 0;
+	int play() {
+		Scanner a = new Scanner(System.in);
+		score = score + startGame.card(score);
+		score = score + startGame.card(score);
+		String ans = "y";
+		while (score <= 21 && !ans.equals("n")) {
+			System.out.print("score is " + score + ", want to hit? y/n: ");
+			ans = a.next();
+			if (ans.equals("y")) {
+				score = score + startGame.card(score);
+			}
+			else if(!ans.equals("n")) {
+				System.out.println(ans + " is not an option.");
+			}
+		}
+		return score;
+		}
+	}
+class comp {
+	int score = 0;
+	int play() {
+		score = score + startGame.card(score);
+		score = score + startGame.card(score);
+		while (score < 17) {
+			score = score + startGame.card(score);
+		}
+		return score;
+	}
+}
+class counter {
+	static int aFinalScore;
+	static int bFinalScore;
+	static String ans = "y";
+}

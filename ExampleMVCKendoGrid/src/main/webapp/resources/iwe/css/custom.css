@@ -1,0 +1,117 @@
+
+
+/* ---------------------------------------------------
+	Icons
+--------------------------------------------------- */
+
+
+.the-icons li{
+	color: #000;
+	line-height: 1.6em;
+}
+
+
+.row-fluid .span3, .row:not(.bootstrap) .span3{
+	width: 22%; /* just added for page layout not required in webblocks */
+}
+
+.icon-book, .icon-calendar, .icon-check, .icon-cog, .icon-comment-alt, .icon-envelope,
+.icon-exclamation-sign, .icon-group, .icon-info-sign, .icon-lightbulb, .icon-minus-sign, .icon-ok,
+.icon-ok-sign, .icon-pencil, .icon-plus-sign, .icon-question-sign, .icon-remove-sign, .icon-search,
+.icon-spinner, .icon-time, .icon-user, .icon-warning-sign, .icon-wrench, .icon-zoom-in, icon-zoom-out,
+.icon-undo, .icon-repeat, .icon-link, .icon-caret-down, .icon-caret-left, .icon-caret-right, .icon-caret-up,
+.icon-hand-right, .icon-phone, icon-file-alt{
+	color: red;
+}
+/* Removed this default font for feature alerts, its also in IWE.css
+li [class^="icon-"], .nav li [class^="icon-"], li [class*=" icon-"], .nav li [class*=" icon-"] {
+	display: inline-block;
+	width: 1.25em;
+	text-align: center;
+	font-size: 1.2em;
+}*/
+
+section{
+	display: table;
+}
+
+.iwe_icons{
+	width:270px;
+	float:left;
+}
+
+.code_print {
+	background-color: #F9F9F9;
+	color: #0055a6;
+	border: 1px solid #888;
+	padding: 10px;
+	border-color: #ddd;
+	line-height: 1.6em;
+	overflow: scroll;
+	padding-left: 40px;
+	padding-bottom: 25px;
+}
+
+.popovers li{
+	float:left;
+	padding: 10px;
+}
+
+.popovers_examples{
+	height: 50px;
+}
+
+.ajax_load{
+	height: 200px;
+}
+
+.ajax_spinner{
+	width: 270px;
+	float: left;
+}
+
+.spinner_style{
+	margin-top: 60px;
+}
+
+#tabs ul {
+	border-bottom: 1px solid #B9dbf4;
+}
+
+.third_party_functions {
+	margin: 10px;
+}
+
+.third_party_functions a {
+	line-height: 20px;
+}
+
+.third_party_type {
+	border-bottom: 1px solid #CCCCCC;
+	padding: 8px 0 8px 0;
+}
+
+.generic_widget {
+	padding: 8px;
+	margin: 0;
+}
+
+.widget_sub_heading span {
+	color: #666666;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.not_found p{
+	margin: 0 0 16px;
+}
+
+.clickovers li{
+	float:left;
+	padding: 10px;
+}
+
+.clickover_examples{
+	height: 50px;
+}
+

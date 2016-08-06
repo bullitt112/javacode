@@ -1,0 +1,88 @@
+Alan Tyhurst - Tutorials
+Topics covered:
+Spring Boot RESTExample, Spring Data, Kendo UI GRID and MySQL 
+
+STUDENTS - CHANGE THE DATBASE SETTING TO MATCH YOUR LOCALHOST.
+application.properties and data.sql
+
+Run as SpringBootApp
+http://localhost:8080/staff/viewuserdata/userdata
+
+${application.version}
+The Spring Boot version: ${spring-boot.version}
+
+The Spring Framework
+Spring is a powerful Java application framework, used in a wide range of configuration options. Its best 
+feature if that it provides enterprise services to Plain Old Java Objects (POJOs) called beans. Spring 
+uses dependency injection (DI) to achieve simplification and increased testability. Spring beans, 
+dependencies, and the services needed by beans are specified in xml configuration files or annotations.
+
+Application Overview
+This demo application is an User management screen which lists down all user records in database, and 
+a form which you can use to add more users. There is validation functionality added to form, so if you 
+try to add empty form then you will get validation errors. To store the record in database, Hibernate JPA 
+implementation is used. Front end is implemented using Spring MVC.
+
+| Annotation | Meaning                                             |
++------------+-----------------------------------------------------+
+| @Component | Spring-managed - Indicates a auto scan component    |
+| @Repository| stereotype for persistence layer                    |
+| @Service   | stereotype for service layer                        |
+| @Controller| stereotype for presentation layer (spring-mvc) 	   |
++------------+-----------------------------------------------------+
+
+Spring Bean Life Cycle
+Spring bean factory is responsible for managing the life cycle of beans created through spring container. The life cycle of beans consist of call back methods which can be categorized broadly in two groups:
+    Post initialization call back methods
+    Pre destruction call back methods
+
+Spring framework provides following 4 ways for controlling life cycle events of bean:
+    InitializingBean and DisposableBean callback interfaces
+    Other Aware interfaces for specific behavior
+    custom init() and destroy() methods in bean configuration file
+    @PostConstruct and @PreDestroy annotations
+    
+In Spring, bean scope is used to decide which type of bean instance should be return from Spring container back to the caller.
+
+5 types of bean scopes supported 
+| @Scope("prototype") | Meaning                                             |
++------------+-----------------------------------------------------|--------+
+| singleton – Return a single bean instance per Spring IoC container		|
+| prototype – Return a new bean instance each time when requested			|
+| request – Return a single bean instance per HTTP request. *				|
+| session – Return a single bean instance per HTTP session. *				|
+| globalSession – Return a single bean instance per global HTTP session. *	|
++------------+-----------------------------------------------------|--------+    
+
+Spring beans autowiring concepts
+In spring framework, setting bean dependencies in configuration files is a good practice to follow, but the spring container is also able to autowire relationships between collaborating beans. This means that it is possible to automatically let Spring resolve collaborators (other beans) for your bean by inspecting the contents of the BeanFactory. Autowiring is specified per bean and can thus be enabled for some beans, while other beans will not be autowired.
+
+There are 5 different types of autowiring modes which are:
+ no(default), byName, byType, constructor, and autodetect                                             
++------------+------------------------------------------------------------------+
+| no – No autowiring at all. Bean references must be defined via a ref elements	|	
+| byName – Autowiring by property name will look for a bean named exactly the 	|
+|	same as the property which needs to be autowired.							|		
+| byType – Allows a property to be autowired if there is axactly one bean of 	|
+|	the property type in the container. Can only have one in the container! 	|
+| constructor – This is analogous to the byType but applies to constructor 		|
+| 		arguments.																|			|																				|
+| autodetect – Chooses constructor ot byType through introSpection of the bean 	|
+|	class. 																		|	
++------------+------------------------------------------------------------------+ 
+
+Component Scan
+1. How to tell Spring to put objects into the application context. Every object in the application context is given a name.
+	. @Component - to put an object in the application context
+2. How to tell Spring to refer to those objects in the application context. (So you do not need to use the 'new') 
+	. @Resource(name="mailSender") - to refer to an object in the application context
+
+@ComponentScan - it scans a package and all of its subpackages, looking for classes that could be 
+automatically registered as beans in the Spring Container.   
+
+@Component - Indicates that the class defines a Spring component
+@Controller - Indicates that the class defines a Spring MVC Controller
+@Service - Indicates that the class defines a Service
+@Repository - Indicates that the class defines a data repository
+
+

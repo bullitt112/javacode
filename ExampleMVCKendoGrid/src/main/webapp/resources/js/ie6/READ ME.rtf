@@ -1,0 +1,61 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset204 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;}
+\margl1440\margr1440\vieww18460\viewh17900\viewkind0
+\deftab720
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri720
+
+\f0\fs24 \cf0 READ ME\
+\
+IE 6 Browser Warning Message\
+\
+/////////////////USAGE///////////////////////////////////\
+To warn users of Internet Explorer 6 browsers to upgrade to the latest version or choose a different browser, follow these instructions:\
+\
+1)Upload the 'ie6' folder and all of its contents into your javascript folder.\
+(Example "/js/ie6/")*\
+\
+2)Insert the following line into the <head> area the pages you'd like the warning to appear in:\
+<!--[if lte IE 6]><script type="text/javascript" language="JavaScript" src="/js/ie6/ie6-upgrade.js"></script><![endif]-->\
+\
+You can use a minified version by using the following line instead:\
+<!--[if lte IE 6]><script type="text/javascript" language="JavaScript" src="/js/ie6/ie6-upgrade.min.js"></script><![endif]-->\
+\
+\
+3)Immediately after the <body> tag, add the following div:\
+<div id="ie6Warning"></div>\
+\
+4)That's it! Upload your file and test it on IE6.\
+\
+/////////////////NOTES///////////////////////////////////\
+*The script is written to work in the folder /js. You can change the folder the script resides in by find/replace the path to the IE6 folder on ie6-upgrade.js\
+Remember to update the minified version as well if you're using it. The default minified script was shrunk using Yahoo's YUI Compressor (http://developer.yahoo.com/yui/compressor/)\
+/////////////////FAQ///////////////////////////////////\
+1)IE6 warning is not showing up. What's wrong?\
+-Make sure the 'ie6' folder is uploaded into a folder on the root named '/js'. If you upload it to another folder, make the proper changes in the javascript file to point to the new location. Javascript must also be enabled for the browser.\
+\
+2)Why do I need to add the 'ie6Warning' div?\
+-This is where the javascript injects the warning code. If you forget to add this, the warning will not show up.\
+\
+3)How can I style the warning message?\
+-The styles are inserted inline. If you need to make custom edits, open the .js file and update your styles inline.\
+\
+4)I'm seeing the warning on other browsers. How can I only show it for IE6 users?\
+-Make sure you use the CSS conditional statement <!--[if lte IE 6]><![endif]--> to wrap the js include, else the message will be displayed on all browsers.\
+\
+5)How does the script know if I've already seen the warning message?\
+-The script creates a cookie called 'displayIE6killerMsg' and defaults it to "yes". If a user closes the message, it will set the cookie to "no" for seven days. After seven days or if the cookie is deleted, the message will re-appear. \
+\
+6)Can I change the expiration time for the cookie?\
+-Yes by editing the .js file. The createCookie() function's third variable sets number of days the cookie variable will live.\
+\pard\pardeftab720\ri720
+\cf0 Example: createCookie("displayIE6killerMsg","yes",365) will set the cookie to live for 365 days.\
+\
+////QUESTIONS/COMMENTS/SUGGESTIONS\
+Joseph Maddela\
+Web Programmer\
+Marketing and Special Events\
+\pard\pardeftab720\ri720
+\cf2 \ul \ulc2 jmaddela@support.ucla.edu\cf0 \ulnone   | ext. 43767
+\f1 \
+}

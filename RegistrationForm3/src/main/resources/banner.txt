@@ -1,0 +1,4 @@
+Alan Tyhurst
+$(application.version)
+The Spring Boot version: $(spring-boot.version)
+http://localhost:8080/register 

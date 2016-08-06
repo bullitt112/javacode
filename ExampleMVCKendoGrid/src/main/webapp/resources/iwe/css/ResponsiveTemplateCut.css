@@ -1,0 +1,179 @@
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::
+	TOP BAR
+::::::::::::::::::::::::::::::::::::::::::::::::::: */
+#top-bar {background:#93d3eb url(../img/audience-nav-bg.jpg) repeat-y center;}
+#top-bar-content { min-height:30px; }
+#top-bar-content a:hover { color:#fff100; text-decoration:none;}
+
+#edu-link {float: left;	font-size: .823em;	font-weight: 600;	line-height: 30px; vertical-align: middle; color:#204e91;}
+#audience-nav { float:right; font-size: 1.25em; height:auto; margin:0; position:relative; text-align:right; top: 0px; }
+#audience-nav li { line-height: 27px; background:url(../img/blue-divider.gif) no-repeat 0% 55%; float:left; margin-left: 5px; padding-left: 5px; position:relative; }
+#audience-nav li:first-child { background:none;}
+#audience-nav a {font-size:.8em; font-weight:600; margin:0; padding:2px 5px; text-decoration:none; color:#204e91;}
+#print-logo { display:none; }
+#nav-li-fullname a:hover {color: #204e91;}
+#audience-nav .icon-cog { font-size: 1.3em; padding: 0 2px;}
+
+@media screen and (max-width: 640px) {
+    #top-bar-content { margin-left: 5px; margin-right: 5px; }
+    #audience-nav a { padding:2px 2px; }
+}
+@media screen and (max-width: 480px) {
+    #audience-nav li { margin-left: 2px; padding-left: 2px; }
+}
+
+/* ---------------------------------------------------
+	FOOTER from 160.css
+--------------------------------------------------- */
+#footer-push { height:100px; }
+#footer {position: relative; width: 100%; background:#526493 url(../img/footer-bg.jpg) repeat-x bottom; border-top:1px solid #17244c; clear:both; height:auto; padding:0px 0px 6px;}
+#footer-content {padding:6px 0 0px; position:relative; }
+#footer ul { margin-bottom:0; }
+#footer li { float:left;  background:url(../img/white-divider.gif) no-repeat left center; display:inline; padding:0 0 0 12px; margin:0 0 0 12px;}
+#footer li:first-child { background:none; padding:0; margin:0; }
+#footer a { color:#fff; font-size:1.02em; }
+#footer a:hover { color:#fff100; text-decoration:none; border-bottom:1px solid #fff100; }
+#footer #social-media {margin:0px; padding:0px; width:auto; }
+#footer-nav { float:left; }	
+
+#social-media { float:right; margin:0; padding:0;}
+#social-media a { float:left; margin:0 0 0 6px; padding:0; }
+#social-media a:hover  { border:none; }
+
+#social-media a.facebook,
+#social-media a.twitter,
+#social-media a.foursquare,
+#social-media a.youtube,
+#social-media a.itunes { width:16px; height:16px; text-indent:-9999px; background:url('../img/sprites.png') no-repeat; }
+#social-media a.facebook { background-position:-24px -61px; }
+#social-media a.twitter { background-position:-40px -61px; }
+#social-media a.foursquare { background-position:-56px -61px; }
+#social-media a.youtube { background-position:-72px -61px; }
+#social-media a.itunes { background-position:-88px -61px; }
+
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::
+	HEADER
+::::::::::::::::::::::::::::::::::::::::::::::::::: */
+#header { background:#2c5e91 url(../img/header-bg.jpg) repeat-x top; border-bottom:1px solid #17244c; min-height:130px; width: 100%; padding: 0;}
+#header-nav {clear:both; padding-top: 33px;}
+#header-content {padding-top:20px; padding-bottom:20px; position:relative; }
+
+#logo { margin: 0 0 10px; }
+#logo a { background:url(../img/sprites.png) 0 0 no-repeat; display:block; height:47px; text-indent:-9999px; width:144px; }
+#subhead-logotype {color: #fff; font-family: Caslon, Georgia, Times, serif; width: 150px; height: 40px; text-transform: none; position: relative; left: 162px; top: -49px; font-size: 32px; margin-bottom:-2.4em;}
+#subhead-logotype a,#subhead-logotype a:visited { color:#fff; text-decoration:none; }
+.subhead-logotype_font{font-size:1.08em;}
+
+#nav-control { background:#033b6e url(../img/mobile-menu-arrow.png) no-repeat right center; border:1px solid #183969; border-radius:2px; color:#fff; display:none; font-weight:600; letter-spacing:1px; padding:5px 25px 5px 15px; position:absolute; right:0; top:30px; text-decoration:none; text-transform:uppercase; }
+
+#main-nav {position:relative; text-align:right; }
+#main-nav > ul { margin:12px 0 0; }
+#main-nav li { background:url(../img/white-divider.gif) no-repeat left 45%; display:inline; margin:0; padding:0 0 0 5px; }
+#main-nav li:first-child { background:none; margin:0; padding:0; }
+#main-nav li a { color:#fff; font-size:.92em; font-weight:600; padding:5px 6px 7px 5px; text-decoration:none; text-transform:uppercase; }
+#main-nav li a:hover { color:#FFF100; }
+#main-nav li a.selected { background:#fff; color:#204e91 !important; }
+#main-nav li a.active { color:#204e91;  }
+#main-nav li ul { background-color:#fff; box-shadow:0 1px 1px #192650; display:none; height:auto; left:0; padding:5px 0 10px; position:absolute; text-align:left; top:20px; width:100%; z-index:1000; }
+#main-nav li li { background:none; }
+#main-nav li li .nav-column { box-shadow:none; display:block; float:left; height:auto; margin:0 8px; padding:0; position:relative; top:0; width:210px; }
+#main-nav li li .nav-column li { background:none; border-bottom:1px solid #204E91; display:block; margin-left:0; padding:4px 0; }
+#main-nav li li .nav-column li a { color:#204E91; font-size:.823em; font-weight:normal;  margin:0; padding:0; text-decoration:none; text-transform:none; }
+#main-nav li li .nav-column li a:hover { color:#955efc; }
+#main-nav .close { color:#204e91!important; display:block; font-size:.92em; font-weight:600; line-height:1.2em; padding:5px 0 0; position:absolute; right:10px; text-decoration:none; }
+#main-nav .close:hover { background-position:-128px -40px; color:#955efc!important; }
+
+.headerButton {border-radius: 5px; text-align: left; text-decoration: none; margin-right: 5px; border:0px !important; }
+#showHideMegaMenuButton {margin-right:0px;}
+.dropdown-wrapper{display:block; margin-left:-1px;}
+
+@media screen and (max-width: 768px) {
+    #dropdown-spacer{display:none}
+    #subhead-logotype { font-size: 26px; top: -45px; left: 135px; margin-bottom:-3.4em; width: 100px;}
+    #header { min-height: 50px;}
+    #header-content {padding-top: 10px; padding-bottom:20px; min-height: 60px;}
+    #header-nav {padding-top: 10px;}
+    #logo a {margin-left: -10px; margin-top:8px;  -ms-transform: scale(0.85,0.85); /* IE 9 */ -webkit-transform: scale(0.85,0.85); /* Chrome, Safari, Opera */ transform: scale(0.85,0.85); /* Standard syntax */}
+    #showHideMegaMenuButtonIcon { margin-left: 10px; margin-top: 17px;}    
+    #showHideUserInformationIcon {margin-left: 12px; margin-top: 17px;}
+    #NoticesButton{display: block; text-align: center; text-decoration:none}
+    #NoticesButtonText {line-height: 50px;}
+    .headerButton {width:50px; height:50px; font-size:30px; padding: 0;}   
+}
+
+@media screen and (max-width: 480px) {
+    #subhead-logotype {font-size: 18px; top: -43px; left: 90px; margin-bottom:-4.4em; }
+    #header-content {padding-top: 10px; padding-bottom:19px; min-height: 52px;}
+    #header-nav {padding-top: 13px;}
+    #logo { margin:0;}
+    #logo a {margin-left: -30px; margin-top:1px; -ms-transform: scale(0.6,0.6); /* IE 9 */ -webkit-transform: scale(0.6,0.6); /* Chrome, Safari, Opera */ transform: scale(0.6,0.6); /* Standard syntax */}
+    #showHideMegaMenuButtonIcon { margin-left: -2px; margin-top: 2px;}    
+    #showHideUserInformationIcon {margin-left: 0; margin-top: 2px;}
+    #NoticesButtonText {line-height: 20px;}
+    .headerButton {width:20px; height:20px; font-size:x-large; padding: 0.4em;}
+}
+
+@media screen and (max-width: 350px) {
+    #header {min-height: 50px;}
+    #header-content {padding-top: 10px; padding-bottom:19px;}
+    #header-nav {padding-top: 13px;}
+    #subhead-logotype {font-size: 15px; top: -44px; left: 73px; margin-bottom:-4.4em; width: 70px;}
+    #logo { margin:0;}
+    #logo a {margin-left: -40px; margin-top:3px; -ms-transform: scale(0.5,0.5); /* IE 9 */ -webkit-transform: scale(0.5,0.5); /* Chrome, Safari, Opera */ transform: scale(0.5,0.5); /* Standard syntax */}
+}
+/* ---------------------------------------------------
+
+	MEGA MENU
+
+--------------------------------------------------- */
+#main-nav li li ul.nav-column li {border:none; padding: 1px 0; margin-left:15px;}
+#main-nav li li ul.nav-column li a p {border:none; padding: 3px 0; font-size: 1.3em; margin:0 0 0 10px; line-height: 105%;}
+#main-nav ul.nav-column li.group-title {border-bottom: 1px solid #204E91; font-weight: bold;}
+#main-nav ul.nav-column li.group-title+li.group-item {margin-top: 3px; }
+#main-nav ul.nav-column li.group-item+li.group-title {margin-top: 20px; }
+#main-nav li ul {height: auto;}  /* makes the mega menu expandible  */
+#main-nav a.close{color: #000000; float: right; font-weight: bold; opacity: 0.2; position: relative; text-shadow: 0 1px 0 #FFFFFF;}
+
+.my_features.float-right.text-right {width: 100%; margin-right: 14px;}
+.my_features.float-right.text-right p{font-size:1em !important; color: #666;text-transform: none;}
+#main-nav li a.text_MyUCLA { padding:0; font-size:1em; text-transform: none; font-weight:normal; padding:0 2px; }
+.my_features.float-right.text-right a:link, .float-right.text-right a:visited, .float-right.text-right a:active{color:#204e91 !important;}
+.my_features.float-right.text-right a:hover {color:#955efc !important;}
+.icon-external-link { padding-left: 2px; font-size: 0.7em;}
+
+/* ---------------------------------------------------
+
+      MEGAMENU SMALL/RESPONSIVE
+
+-----------------------------------------------------  */
+.smallmenu_title {border-bottom: 1px solid #ccc; padding: 10px 10px 5px 5px; clear: both; min-height:20px; font-weight:600; text-align:left; cursor:pointer; display: block;}
+.smallmenu_title span {text-decoration: none}
+.smallmenu_title:hover {text-decoration: none;}
+.smallmenu_title.hoverYellow {text-transform:uppercase;}
+.smallmenu_title.hoverYellow:hover {background-image: none; background-color: #ffedb3; border-color: #ffda66;}
+.smallmenu_title.default.secondTier {color: #204E91;}
+.secondTier .smallmenu_icon { margin-right: 1em;}
+.smallmenu_title.default.thirdTier {padding-left:4em; color: #204E91;}
+
+.smallmenu_title .smallmenu_icon {float: left; font-size: 14px; padding-right: 7px;}
+.smallmenu_title a span.icon-minus-sign, .smallmenu_title a span.icon-plus-sign  {font-size: 14px !important;}
+#UserInformationPopover{width: 150px; font-size: 1.5em;}
+.smallmenu_title .secondTierNoExpand { margin-left:32px}
+
+ul, ol {
+margin: 0 0 10px;
+}
+
+#audience-nav a {
+    color: #204e91;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin: 0;
+    padding: 2px 5px;
+    text-decoration: none;
+}
+
+#main-nav {
+    margin: 12px 0 0;
+}

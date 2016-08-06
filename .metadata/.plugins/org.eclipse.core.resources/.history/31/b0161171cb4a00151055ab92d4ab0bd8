@@ -1,0 +1,19 @@
+package dfg;
+
+public class Allan {
+
+	public static void main(String[] args) {
+		static void intPrint(String message, int number){
+			while (number > 0){
+				System.out.println(message);
+				number--;
+			}
+		}
+	int Count = 2;
+	intPrint("a message", Count);
+
+		 }
+
+	}
+
+

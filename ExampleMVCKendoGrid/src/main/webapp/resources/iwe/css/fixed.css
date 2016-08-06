@@ -1,0 +1,21 @@
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::
+	
+	FIXED WIDTH CSS
+	* UCLA Communications *
+
+	* Replace with responsive.css to create a
+	  responsive site with mobile/media queries *
+	
+::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+
+#top-bar { min-width:1280px; }
+#header { min-width:1280px; }
+#footer { min-width:1280px; }
+
+#top-bar-content { width:1280px; }
+#header-content { width:1280px; min-height:89px; }
+/*#hero-image { height:450px; }*/
+#container { width:1280px; } 
+#footer-content { width:1280px;  padding:5px 0px 20px 0px;}
+
